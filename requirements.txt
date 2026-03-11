@@ -1,0 +1,36 @@
+# Core LLM frameworks
+
+langchain
+langgraph
+langchain-core
+langchain-community
+
+# Groq integration
+
+langchain-groq
+groq
+
+# Google Gemini integration
+
+google-generativeai
+
+# Environment variable management
+
+python-dotenv
+
+# HTTP requests (often used for tools/APIs)
+
+requests
+
+# Data validation (commonly used with agents)
+
+pydantic
+
+# Async HTTP (used in many AI tools)
+
+httpx
+
+# Optional but useful for GenAI workflows
+
+tqdm
+typing-extensions
