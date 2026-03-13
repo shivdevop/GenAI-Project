@@ -13,6 +13,8 @@ groq
 # Google Gemini integration
 
 google-generativeai
+langchain-google-genai
+
 
 # Environment variable management
 
@@ -34,3 +36,7 @@ httpx
 
 tqdm
 typing-extensions
+
+#Open ai 
+openai
+
