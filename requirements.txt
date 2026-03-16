@@ -39,4 +39,4 @@ typing-extensions
 
 #Open ai 
 openai
-
+langchain_openai
