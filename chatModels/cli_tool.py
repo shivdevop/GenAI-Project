@@ -30,19 +30,37 @@ while True:
         "content":user_input
     })
 
-    response=client.chat.completions.create(
+    #lets add streaming to the output 
+    stream=client.chat.completions.create(
         model="gpt-4o-mini",
-        messages=messages
+        messages=messages,
+        stream=True
     )
 
-    ai_response=response.choices[0].message.content
+    # response=client.chat.completions.create(
+    #     model="gpt-4o-mini",
+    #     messages=messages
+    # )
+
+    print("\nAI:",end=" ",flush=True)
+    ai_response=""
+
+    # ai_response=response.choices[0].message.content
+
+    for chunk in stream:
+        token=chunk.choices[0].delta.content
+
+        if token:
+            print(token,end=" ",flush=True)
+            ai_response+=token
+
+    print("\n")
 
     messages.append({
         "role":"assistant",
         "content":ai_response
     })
 
-    print("\nAI:",ai_response)
-    print()
+    # print("\nAI:",ai_response)
+    # print()
 
-    
