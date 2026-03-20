@@ -2,6 +2,7 @@
 Create a memory store 
 keep passing the previous conversation history along with the new query 
 
+--> ALSO TRY AND LIMIT HISTORY TO AVOID EXCEEDING THE CONTEXT WINDOW LIMIT !!!!
 """
 
 from dotenv import load_dotenv
@@ -37,4 +38,5 @@ while True:
     chat_memory.append(AIMessage(content=response.content))
 
     print("\nAI: ", response.content, "\n")
-    
+
+
